@@ -1,13 +1,13 @@
 <?php
-/*####
-#
-#	Name: SimpleCounter
-#	Version: 1.3
-#	Author: SimonSimcity
-#
-####*/
+/** 
+*
+*	Name: SimpleCounter
+*	Version: 1.3
+*	Author: SimonSimcity
+*
+*/
 
-$SCounterPath= $modx->config['base_path']. 'assets/snippets/scounter/';
+$SCounterPath= MODX_BASE_PATH . 'assets/snippets/scounter/';
 include_once($SCounterPath.'sc.class.inc.php');
 
 $SCounter = new SCounter;
@@ -15,4 +15,3 @@ $SCounter->VersionCheck("1.3");
 $SCounter->Set("path",$SCounterPath);
 $SCounter->Set("minuten","15");
 return $SCounter->Run();
-?>
